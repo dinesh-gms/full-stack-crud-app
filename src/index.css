@@ -1,0 +1,24 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+.active {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+li > ul > li > a.active {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.logout {
+  visibility: hidden;
+}
+
+.pop-up:hover .logout,
+.pop-up:focus .logout{
+  visibility: visible;
+}

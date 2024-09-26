@@ -1,0 +1,47 @@
+.preloader {
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #020617;
+  transition: all 0.6s ease-out;
+}
+
+.preloader:after, .preloader:before {
+  border: 6px solid #fff;
+  border-radius: 100%;
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+.preloader:before {
+  border-bottom-color: rgb(30 41 59 / 1);
+  border-left-color: rgb(30 41 59 / 1);
+  animation: spin .5s infinite linear reverse;
+  height: 45px;
+  width: 45px;
+}
+
+.preloader:after {
+  animation: spin .25s infinite linear;
+  height: 70px;
+  width: 70px;
+  border-right-color: rgb(30 41 59 / 1);
+  border-top-color: rgb(30 41 59 / 1);
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
